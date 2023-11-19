@@ -70,12 +70,11 @@ def get_best_sliding_window(train_data, test_data, scaler, window_min_size=5, wi
     return min_window
 
 
-def load_US_Stock_Data():
-
-    tickers_us = ['AAPL', 'ABB', 'ABBV', 'AEP', 'AGFS', 'AMGN', 'AMZN', 'BA', 'BABA', 'BAC', 'BBL', 'BCH', 'BHP', 'BP', 'BRK-A', 'BSAC', 'BUD', 'C', 'CAT', 'CELG',
-                'CHL', 'CHTR', 'CMCSA', 'CODI', 'CSCO', 'CVX', 'D', 'DHR', 'DIS', 'DUK', 'EXC', 'FB', 'GD', 'GE', 'GMRE', 'GOOG', 'HD', 'HON', 'HRG', 'HSBC', 'IEP', 
-                'INTC', 'JNJ', 'JPM', 'KO', 'LMT', 'MA', 'MCD', 'MDT', 'MMM', 'MO', 'MRK', 'MSFT', 'NEE', 'NGG', 'NVS', 'ORCL', 'PCG', 'PCLN', 'PEP', 'PFE', 'PG', 'PICO',
-                'PM', 'PPL', 'PTR', 'RDS-B', 'REX', 'SLB', 'SNP', 'SNY', 'SO', 'SPLP', 'SRE', 'T', 'TM', 'TOT', 'TSM', 'UL', 'UN', 'UNH', 'UPS', 'UTX', 'V', 'VZ', 'WFC', 'WMT', 'XOM']
+def load_yfstock_data():
+    tickers_us = ['AAPL', 'ABBV', 'AEP', 'AMGN', 'AMZN', 'BA', 'BABA', 'BAC', 'BCH', 'BHP', 'BP', 'BRK-A', 'BSAC', 'BUD', 'C', 'CAT',
+                 'CHTR', 'CMCSA', 'CODI', 'CSCO', 'CVX', 'D', 'DHR', 'DIS', 'DUK', 'EXC', 'GD', 'GE', 'GMRE', 'GOOG', 'HD', 'HON',  'HSBC', 'IEP', 
+                'INTC', 'JNJ', 'JPM', 'KO', 'LMT', 'MA', 'MCD', 'MDT', 'MMM', 'META', 'MO', 'MRK', 'MSFT', 'NEE', 'NGG', 'NVS', 'ORCL', 'PCG', 'PEP', 'PFE', 'PG',
+                'PM', 'PPL', 'REX', 'SLB',  'SNY', 'SO', 'SPLP', 'SRE', 'T', 'TM',  'TSM', 'UL',  'UNH', 'UPS', 'V', 'VZ', 'WFC', 'WMT', 'XOM']
     
     if not os.path.exists('data/price_us'):
         os.makedirs('data/price_us')
